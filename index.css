@@ -20,91 +20,46 @@ body, h1, h2, h3, p, a, span, button {
 .fade2 { animation-delay: 0.4s; }
 
 
+/* Base Animation */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translateY(-30px);
+    transform: translateY(30px);
   }
   100% {
     opacity: 1;
     transform: translateY(0);
-  }}
-.fadeInUp {
+  }
+}
+
+/* Universal Animation Classes */
+.animate-on-scroll {
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.8s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 }
-.hero .fade1 {
-  animation-delay: 0.3s;
-}
 
-.hero .fade2 {
-  animation-delay: 0.5s;
-}
-
-.hero .contact-btn {
-  animation-delay: 0.6;
-}
-.hero .social-icons{
-  animation-delay: 0.8;
-}
-
-/* About page animations */
-.about-container .fadeInUp {
-  animation-delay: 0.3s;
-}
-
-.about-left .fadeInUp {
-  animation-delay: 0.4s;
-}
-
+/* Remove all individual delay rules */
+.hero .fade1,
+.hero .fade2,
+.hero .contact-btn,
+.hero .social-icons,
+.about-container .fadeInUp,
+.about-left .fadeInUp,
 .about-right .fadeInUp {
-  animation-delay: 0.5s;
+  animation-delay: 0s !important; /* Force no delay */
 }
+
+/* Remove conflicting animations */
 .hero {
-  animation: fadeInUp 2s ease-out both;
-  opacity: 0;
-  transform: translateY(-30px);
+  animation: none;
+  opacity: 1; /* Remove initial hidden state */
+  transform: none;
 }
-.about-section {
-  animation: fadeInUp 2s ease-out both;
-  opacity: 0;
-  transform: translateY(-30px); 
-}
+
 .fade-up {
-  opacity: 0;
-  transform: translateY(0px);
-  transition: 
-    opacity 0.8s cubic-bezier(0.33, 1, 0.68, 1),
-    transform 0.8s cubic-bezier(0.32, 0, 0.67, 0);
-}
-
-.fade-up.show {
-  opacity: 1;
-  transform: translateY(30px);
-}
-@keyframes blurDisappearReappear {
-  0% {
-    opacity: 1;
-    filter: blur(0);
-  }
-  30% {
-    opacity: 0;
-    filter: blur(5px);
-  }
-  60% {
-    opacity: 0;
-    filter: blur(5px);
-  }
-  100% {
-    opacity: 1;
-    filter: blur(0);
-  }
-}
-
-.animate-on-scroll {
-  animation: blurDisappearReappear 1.5s ease-in-out forwards;
-  opacity: 0; /* Start hidden */
+  /* Remove if not needed */
+  display: none;
 }
 
 /* ——————————————————————————————

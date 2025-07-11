@@ -1,5 +1,4 @@
-
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -10,185 +9,122 @@
 
 <body class="home">
   <nav class="navbar">
-  <div class="navbar-container"></div>
-  <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#work">Work</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</div>
-</nav>
+    <div class="navbar-container">
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
   
-  <section id="home"class="hero">
-  <div class="hero-left fadeInUp animate-on-scroll">
-    <div class="hero-text">
-      <h1 class="fade1">Hi! I’m <span class="highlight">Tra Vo</span></h1>
-      <h2 class="fade2">Welcome to my <span class="highlight">Portfolio</span>!</h2>
-      <a href="#contact" class="contact-btn fadeInUp animate-on-scroll">Contact</a>
+  <section id="home" class="hero">
+    <div class="hero-left animate-on-scroll">
+      <div class="hero-text">
+        <h1>Hi! I'm <span class="highlight">Tra Vo</span></h1>
+        <h2>Welcome to my <span class="highlight">Portfolio</span>!</h2>
+        <a href="#contact" class="contact-btn">Contact</a>
+      </div>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/trasongvo" target="_blank">
+          <img src="images/linkedin.png" alt="LinkedIn" />
+        </a>
+        <a href="https://github.com/AstraVo06" target="_blank">
+          <img src="images/github.png" alt="GitHub" />
+        </a>
+      </div>
     </div>
-
-    <div class="social-icons fadeInUp animate-on-scroll">
-      <a href="https://www.linkedin.com/in/trasongvo" target="_blank">
-        <img src="images/linkedin.png" alt="LinkedIn" />
-      </a>
-      <a href="https://github.com/AstraVo06" target="_blank">
-        <img src="images/github.png" alt="GitHub" />
-      </a>
+    <div class="hero-right animate-on-scroll">
+      <div class="hero-image">
+        <img src="images/home.png" alt="Tra Vo Home Photo" class="profile-pic" />
+        <div class="circle circle-lg"></div>
+        <div class="circle circle-md"></div>
+        <div class="circle circle-sm"></div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div class="hero-right fadeInUp animate-on-scroll">
-    <div class="hero-image">
-      <img src="images/home.png" alt="Tra Vo Home Photo" class="profile-pic" />
-      <div class="circle circle-lg"></div>
-      <div class="circle circle-md"></div>
-      <div class="circle circle-sm"></div>
-    </div>
-  </div>
-</section>
-
-
-
-  <section id="about"class="about-section">
-    <div class="about-container fadeInUp animate-on-scroll">
-      <div class="about-left fadeInUp animate-on-scroll">
+  <section id="about" class="about-section">
+    <div class="about-container animate-on-scroll">
+      <div class="about-left">
         <img src="images/about.png" alt="Tra Vo Profile" class="about-pic" />
-        <div class="cv-btn fadeInUp animate-on-scroll">
-        <a class="view-cv-btn" href="https://docs.google.com/document/d/YOUR_DOC_ID/view" target="_blank" rel="noopener noreferrer">View CV</a>
-        <a class="download-cv-btn " href="documents/tra-vo-cv.pdf" download>Download CV</a>
+        <div class="cv-btn">
+          <a class="view-cv-btn" href="#" target="_blank">View CV</a>
+          <a class="download-cv-btn" href="#" download>Download CV</a>
+        </div>
       </div>
-      </div>
-      <div class="about-right fadeInUp animate-on-scroll">
+      <div class="about-right">
         <h2>About me</h2>
-        <p>Hello! I’m Tra Song Vo, born in Vietnam in 2006, 
-          and just finished my freshman year at DePauw University pursuing 
-          Computer Science and Economics. I have hands-on experience in
-          web development and find it thrilling to click “run” and watch my 
-          code come alive in the browser. That instant feedback drives me to
-          explore new tools and frameworks. When I’m not writing code, you’ll
-          find me hanging out with friends or losing myself in a good detective novel.</p>
+        <p>Hello! I'm Tra Song Vo, born in Vietnam in 2006, and just finished my freshman year at DePauw University pursuing Computer Science and Economics. I have hands-on experience in web development and find it thrilling to click "run" and watch my code come alive in the browser. That instant feedback drives me to explore new tools and frameworks. When I'm not writing code, you'll find me hanging out with friends or losing myself in a good detective novel.</p>
       </div>
-            <div class="about-circles fadeInUp animate-on-scroll">
-                 <div class="circle1"></div>
-                 <div class="circle2"></div>
-            </div>
+      <div class="about-circles">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+      </div>
     </div>
   </section>
 
   <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const animatedSections = document.querySelectorAll('section');
-  const navLinks = document.querySelectorAll('.nav-links a');
-
-  // Initialize animations
-  function initAnimations() {
-    document.querySelectorAll('.fade-up').forEach(el => {
-      el.classList.add('show');
+  document.addEventListener('DOMContentLoaded', function() {
+    // Simplified Intersection Observer
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animated');
+        } else {
+          // Remove this line if you don't want animations to reset
+          entry.target.classList.remove('animated');
+        }
+      });
+    }, {
+      threshold: 0.2,
+      rootMargin: '0px 0px -100px 0px'
     });
-  }
 
-  // Create the blur/disappear/reappear effect
-  function triggerBlurAnimation(section) {
-    const elements = section.querySelectorAll('.animate-on-scroll');
-    
-    elements.forEach((el, index) => {
-      // Reset animation
-      el.style.animation = 'none';
-      void el.offsetWidth; // Trigger reflow
-      
-      // Stagger animations with delay
-      setTimeout(() => {
-        el.style.animation = 'blurDisappearReappear 1.5s ease-in-out forwards';
-      }, index * 200);
+    // Observe all animate-on-scroll elements
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
     });
-  }
 
-  // Set up intersection observer
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // Trigger animations
-        entry.target.querySelectorAll('.fade-up').forEach(el => {
-          el.classList.add('show');
-        });
-        triggerBlurAnimation(entry.target);
-        updateActiveLink(entry.target.id);
-      }
-    });
-  }, {
-    threshold: 0.3,
-    rootMargin: '0px 0px -150px 0px'
-  });
-
-  // Observe all sections
-  animatedSections.forEach(section => {
-    observer.observe(section);
-  });
-
-  // Handle nav link clicks
-  navLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      const targetId = this.getAttribute('href').substring(1);
-      const targetSection = document.getElementById(targetId);
-      if (targetSection) {
+    // Smooth scrolling for nav links
+    document.querySelectorAll('.nav-links a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
         e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
         
-        // Scroll to section
         window.scrollTo({
-          top: targetSection.offsetTop - 60,
+          top: targetElement.offsetTop - 60,
           behavior: 'smooth'
         });
+      });
+    });
+
+    // Active link handling
+    function updateActiveLink() {
+      const scrollPosition = window.scrollY + 100;
+      document.querySelectorAll('section').forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const id = section.getAttribute('id');
         
-        // Trigger animations after scroll
-        setTimeout(() => {
-          targetSection.querySelectorAll('.fade-up').forEach(el => {
-            el.classList.add('show');
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          document.querySelectorAll('.nav-links a').forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${id}`) {
+              link.classList.add('active');
+            }
           });
-          triggerBlurAnimation(targetSection);
-          updateActiveLink(targetId);
-        }, 1000);
-      }
-    });
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateActiveLink);
+    updateActiveLink(); // Initialize
   });
-
-  // Improved active link handling
-  function updateActiveLink(activeId) {
-    navLinks.forEach(link => {
-      const linkId = link.getAttribute('href').substring(1);
-      if (linkId === activeId) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
-      }
-    });
-  }
-
-  // Initialize
-  initAnimations();
-  
-  // Set initial active state based on scroll position
-  function checkInitialActive() {
-    const scrollPosition = window.scrollY + 100;
-    let activeId = 'home'; // Default to home
-    
-    animatedSections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.offsetHeight;
-      
-      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-        activeId = section.id;
-      }
-    });
-    
-    updateActiveLink(activeId);
-  }
-  
-  window.addEventListener('scroll', checkInitialActive);
-  checkInitialActive(); // Initial check
-});
   </script>
 </body>
 </html>
