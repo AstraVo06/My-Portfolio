@@ -49,82 +49,257 @@
 
   <section id="about" class="about-section">
     <div class="about-container animate-on-scroll">
-      <div class="about-left">
+      <div class="about-left animate-on-scroll">
         <img src="images/about.png" alt="Tra Vo Profile" class="about-pic" />
         <div class="cv-btn">
           <a class="view-cv-btn" href="#" target="_blank">View CV</a>
           <a class="download-cv-btn" href="#" download>Download CV</a>
         </div>
       </div>
-      <div class="about-right">
+      <div class="about-right animate-on-scroll">
         <h2>About me</h2>
         <p>Hello! I'm Tra Song Vo, born in Vietnam in 2006, and just finished my freshman year at DePauw University pursuing Computer Science and Economics. I have hands-on experience in web development and find it thrilling to click "run" and watch my code come alive in the browser. That instant feedback drives me to explore new tools and frameworks. When I'm not writing code, you'll find me hanging out with friends or losing myself in a good detective novel.</p>
       </div>
-      <div class="about-circles">
+      <div class="about-circles animate-on-scroll">
         <div class="circle1"></div>
         <div class="circle2"></div>
       </div>
     </div>
   </section>
 
-  <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Simplified Intersection Observer
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animated');
-        } else {
-          // Remove this line if you don't want animations to reset
-          entry.target.classList.remove('animated');
-        }
-      });
-    }, {
-      threshold: 0.2,
-      rootMargin: '0px 0px -100px 0px'
-    });
+   <section id="skills" class="skills-section">
+  <div class="container animate-on-scroll">
+    <h2>Skills</h2>
+    
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="tech">Technical</button>
+      <button class="tab-btn" data-tab="design">Design</button>
+    </div>
+    
+    <div class="skills-grid active" id="tech">
+      <!-- Technical Skills -->
+      <div class="skill-card">
+        <img src="images/html.png" alt="HTML5" class="skill-icon">
+        <h3>HTML5</h3>
+        <div class="progress-container">
+          <img src="images/code.png" alt="Cloud" class="cloud-icon">
+          <div class="progress-bar">
+            <div class="progress" style="width: 65%"></div>
+          </div>
+        </div>
+        <span>65%</span>
+      </div>
+      
+      <div class="skill-card">
+        <img src="images/css3.png" alt="CSS3" class="skill-icon">
+        <h3>CSS3</h3>
+        <div class="progress-container">
+          <img src="images/code.png" alt="Cloud" class="cloud-icon">
+          <div class="progress-bar">
+            <div class="progress" style="width: 65%"></div>
+          </div>
+        </div>
+        <span>65%</span>
+      </div>
+      
+      <div class="skill-card">
+        <img src="images/js.png" alt="JavaScript" class="skill-icon">
+        <h3>JavaScript</h3>
+        <div class="progress-container">
+          <img src="images/code.png" alt="Cloud" class="cloud-icon">
+          <div class="progress-bar">
+            <div class="progress" style="width: 60%"></div>
+          </div>
+        </div>
+        <span>60%</span>
+      </div>
+      
+      <div class="skill-card">
+        <img src="images/uxui.png" alt="UX/UI" class="skill-icon">
+        <h3>UX/UI</h3>
+        <div class="progress-container">
+          <img src="images/code.png" alt="Cloud" class="cloud-icon">
+          <div class="progress-bar">
+            <div class="progress" style="width: 75%"></div>
+          </div>
+        </div>
+        <span>75%</span>
+      </div>
+    </div>
+    
+    <div class="skills-grid" id="design">
+      <!-- Design Skills -->
+      <div class="skill-card">
+        <img src="images/ai.png" alt="Illustrator" class="skill-icon">
+        <h3>Illustrator</h3>
+        <div class="progress-container">
+          <img src="images/code.png" alt="Cloud" class="cloud-icon">
+          <div class="progress-bar">
+            <div class="progress" style="width: 80%"></div>
+          </div>
+        </div>
+        <span>80%</span>
+      </div>
+      
+      <div class="skill-card">
+        <img src="images/can.png" alt="Canva" class="skill-icon">
+        <h3>Canva</h3>
+        <div class="progress-container">
+          <img src="images/code.png" alt="Cloud" class="cloud-icon">
+          <div class="progress-bar">
+            <div class="progress" style="width: 85%"></div>
+          </div>
+        </div>
+        <span>85%</span>
+      </div>
+      
+      <div class="skill-card">
+        <img src="images/ind.png" alt="InDesign" class="skill-icon">
+        <h3>InDesign</h3>
+        <div class="progress-container">
+          <img src="images/code.png" alt="Cloud" class="cloud-icon">
+          <div class="progress-bar">
+            <div class="progress" style="width: 70%"></div>
+          </div>
+        </div>
+        <span>70%</span>
+      </div>
+      
+      <div class="skill-card">
+        <img src="images/capcut.png" alt="CapCut" class="skill-icon">
+        <h3>CapCut</h3>
+        <div class="progress-container">
+          <img src="images/code.png" alt="Cloud" class="cloud-icon">
+          <div class="progress-bar">
+            <div class="progress" style="width: 80%"></div>
+          </div>
+        </div>
+        <span>80%</span>
+      </div>
+    </div>
+  </section>
 
-    // Observe all animate-on-scroll elements
-    document.querySelectorAll('.animate-on-scroll').forEach(el => {
-      observer.observe(el);
-    });
-
-    // Smooth scrolling for nav links
-    document.querySelectorAll('.nav-links a').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
+  
+<section id="experience" class="experience-section">
+  <div class="container animate-on-scroll">
+    <h2>Experience</h2>
+    
+    <div class="experience-cards-container animate-on-scroll">
+      <!-- First Info Card (Left) - COMPLETE CARD -->
+      <div class="info-card animate-on-scroll">
+        <!-- Education -->
+        <div class="experience-card">
+          <div class="experience-content">
+            <div class="experience-header">
+              <img src="images/hat.png" alt="Education Icon" class="experience-icon">
+              <div>
+                <span class="experience-date">2024 – Present</span>
+                <h3 class="experience-title">Bachelor of Arts, Computer Science and Economics @ DePauw University</h3>
+                <ul class="experience-details">
+                  <li>Double major in Computer Science and Economics</li>
+                  <li>Dean's List Fall 2024 and Spring 2025</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
         
-        window.scrollTo({
-          top: targetElement.offsetTop - 60,
-          behavior: 'smooth'
-        });
-      });
-    });
-
-    // Active link handling
-    function updateActiveLink() {
-      const scrollPosition = window.scrollY + 100;
-      document.querySelectorAll('section').forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        const id = section.getAttribute('id');
+        <!-- Hackathon -->
+        <div class="experience-card">
+          <div class="experience-content">
+            <div class="experience-header">
+              <img src="images/bag.png" alt="Hackathon Icon" class="experience-icon">
+              <div>
+                <span class="experience-date">March – April 2025</span>
+                <h3 class="experience-title">Hackathon Participant @ TigerHacks Greencastle, IN</h3>
+                <ul class="experience-details">
+                  <li>Collaborated on BizzUp, a demo web app showcasing local-business deals</li>
+                  <li>Built frontend components in React, integrated Firebase backend</li>
+                  <li>Documented workflows and presented prototype to Judges</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
         
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-          document.querySelectorAll('.nav-links a').forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${id}`) {
-              link.classList.add('active');
-            }
-          });
-        }
-      });
-    }
+        <!-- Newspaper -->
+        <div class="experience-card">
+          <div class="experience-content">
+            <div class="experience-header">
+              <img src="images/bag.png" alt="Newspaper Icon" class="experience-icon">
+              <div>
+                <span class="experience-date">Fall 2024 – Present</span>
+                <h3 class="experience-title">Page Designer & Photographer @ The DePauw Newspaper Greencastle, IN</h3>
+                <ul class="experience-details">
+                  <li>Capture precious moments at campus events and competitions</li>
+                  <li>Design weekly page layouts, collaborating with editors for brand consistency</li>
+                  <li>Teach new staff photography and layout tools</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- Close first info-card -->
+      
+      <!-- Second Info Card (Right) - COMPLETE CARD -->
+      <div class="info-card animate-on-scroll">
+        <!-- Instagram -->
+        <div class="experience-card">
+          <div class="experience-content">
+            <div class="experience-header">
+              <img src="images/bag.png" alt="Instagram Icon" class="experience-icon">
+              <div>
+                <span class="experience-date">2023 – Present</span>
+                <h3 class="experience-title">Content Creator @ Instagram Remote (Ho Chi Minh City)</h3>
+                <ul class="experience-details">
+                  <li>Produced an Instagram reel with 8,000+ views</li>
+                  <li>Directed, filmed, and edited "Only You" music video praised by faculty</li>
+                  <li>Capture everyday beauty through photography and video storytelling</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Journalist Club -->
+        <div class="experience-card">
+          <div class="experience-content">
+            <div class="experience-header">
+              <img src="images/bag.png" alt="Design Icon" class="experience-icon">
+              <div>
+                <span class="experience-date">Aug 2022 – May 2023</span>
+                <h3 class="experience-title">Head of Design Department @ Humans of NTH (Journalist Club) Ho Chi Minh City, VN</h3>
+                <ul class="experience-details">
+                  <li>Facilitated online meetings, delegated tasks based on individual strengths</li>
+                  <li>Produced video series and gift tribute achieving 500–700+ interactions</li>
+                  <li>Led concept planning and visual direction across teams</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- BigBass Crew -->
+        <div class="experience-card">
+          <div class="experience-content">
+            <div class="experience-header">
+              <img src="images/bag.png" alt="PR Icon" class="experience-icon">
+              <div>
+                <span class="experience-date">Aug 2022 – May 2023</span>
+                <h3 class="experience-title">Designer, Photographer, Head of PR Team @ The BigBass Crew Ho Chi Minh City, VN</h3>
+                <ul class="experience-details">
+                  <li>Created "Love Recipe" anniversary poster and secured two sponsorships worth 20M VND</li>
+                  <li>Designed event posters and thumbnails that boosted engagement by 200+ interactions</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- Close second info-card -->
+    </div> <!-- Close experience-cards-container -->
+  </div> <!-- Close container -->
+</section>
 
-    window.addEventListener('scroll', updateActiveLink);
-    updateActiveLink(); // Initialize
-  });
-  </script>
+  <script src="index.js"></script>
 </body>
 </html>
