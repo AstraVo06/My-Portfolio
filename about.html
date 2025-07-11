@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tra Vo Portfolio – About</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="navbar.css" />
+</head>
+<body class="about">
+<div id="navbar-container"></div>
+
+  <!-- HERO SECTION (ABOUT) -->
+  <section class="hero-about">
+    <!-- 1) The SAME circle element (initially bottom-left, then .moved moves it bottom-right) -->
+    <div class="circle"></div>
+
+    <!-- 2) About profile picture & “Download CV” ribbon -->
+    <img
+      src="images/about.png"
+      alt="Tra Vo About Photo"
+      class="profile-pic about-pic"
+    />
+    <a href="TraVo_CV.pdf" class="download-ribbon" target="_blank">Download CV</a>
+
+    <!-- 3) “About me” white text block on the right -->
+    <div class="about-text">
+      <h1>About me</h1>
+      <p>Hello! I’m Tra Song Vo, born in Vietnam in 2006…</p>
+      <p>I have hands-on experience in web development…</p>
+      <p>When I’m not writing code, you’ll find me hanging out with friends…</p>
+    </div>
+  </section>
+
+  <!-- 4) Additional detailed content below -->
+  <section class="page-content">
+    <h1>More About Tra Vo</h1>
+    <p>I’m a computer science and communication double major…</p>
+    <p>During my freshman year, I built React components and connected Firebase…</p>
+    <p>In Vietnam, I led the design team for Humans of NTH…</p>
+    <p>Outside of coding, I love reading detective novels, especially Agatha Christie.</p>
+  </section>
+
+  <!-- 5) JavaScript to trigger the circle’s “move” on page load -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const circle = document.querySelector(".circle");
+      setTimeout(() => {
+        circle.classList.add("moved");
+      }, 50);
+    });
+  </script>
+  <script src="navbarload.js"></script>
+</body>
+</html>
