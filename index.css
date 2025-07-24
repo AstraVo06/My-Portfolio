@@ -266,7 +266,6 @@ font-weight: 510;
 
 
 
-
 .about-section {
   padding: 40px 0 80px;
   display: flex;
@@ -341,11 +340,11 @@ font-weight: 510;
 }
 
 .download-cv-btn:hover {
-  background-color: #880000;
+  background-color: #960808;
 }
 .view-cv-btn {
   margin-top: 20px;
-  background-color: #b30000;
+  background-color: #960808;
   color: white;
   padding: 12px 24px;
   font-weight: bold;
