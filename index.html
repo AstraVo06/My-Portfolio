@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tra Vo Portfolio – Home</title>
   <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body class="home">
@@ -185,7 +186,7 @@
     <h2>Experience</h2>
     
     <div class="experience-cards-container animate-on-scroll">
-      <!-- First Info Card (Left) - COMPLETE CARD -->
+      
       <div class="info-card animate-on-scroll">
         <!-- Education -->
         <div class="experience-card">
@@ -239,9 +240,9 @@
             </div>
           </div>
         </div>
-      </div> <!-- Close first info-card -->
+      </div> 
       
-      <!-- Second Info Card (Right) - COMPLETE CARD -->
+    
       <div class="info-card animate-on-scroll">
         <!-- Instagram -->
         <div class="experience-card">
@@ -268,7 +269,7 @@
               <img src="images/bag.png" alt="Design Icon" class="experience-icon">
               <div>
                 <span class="experience-date">Aug 2022 – May 2023</span>
-                <h3 class="experience-title">Head of Design Department @ Humans of NTH (Journalist Club) Ho Chi Minh City, VN</h3>
+                <h3 class="experience-title">Head of Design Department @Humans of NTH (Journalist Club), Ho Chi Minh City, VN</h3>
                 <ul class="experience-details">
                   <li>Facilitated online meetings, delegated tasks based on individual strengths</li>
                   <li>Produced video series and gift tribute achieving 500–700+ interactions</li>
@@ -286,7 +287,7 @@
               <img src="images/bag.png" alt="PR Icon" class="experience-icon">
               <div>
                 <span class="experience-date">Aug 2022 – May 2023</span>
-                <h3 class="experience-title">Designer, Photographer, Head of PR Team @ The BigBass Crew Ho Chi Minh City, VN</h3>
+                <h3 class="experience-title">Head of PR Team @The BigBass Crew, Ho Chi Minh City, VN</h3>
                 <ul class="experience-details">
                   <li>Created "Love Recipe" anniversary poster and secured two sponsorships worth 20M VND</li>
                   <li>Designed event posters and thumbnails that boosted engagement by 200+ interactions</li>
@@ -295,10 +296,405 @@
             </div>
           </div>
         </div>
-      </div> <!-- Close second info-card -->
-    </div> <!-- Close experience-cards-container -->
-  </div> <!-- Close container -->
+      </div> 
+    </div> 
+  </div> 
 </section>
+
+<section id="work" class="work-section">
+  <div class="work-container animate-on-scroll">
+    <h2>Work</h2>
+    
+    <div class="bookshelf">
+      <!-- Book 1 -->
+      <div class="book" data-project="project1">
+        <img src="images/p1.png" alt="BizzUp" class="book-image">
+        <div class="book-title">Project 1</div>
+      </div>
+      
+      <!-- Book 2 -->
+      <div class="book" data-project="project2">
+        <img src="images/p2.png" alt="Project 2" class="book-image">
+        <div class="book-title">Project 2</div>
+      </div>
+      
+      <!-- Book 3 -->
+      <div class="book" data-project="project3">
+        <img src="images/p3.png" alt="Project 3" class="book-image">
+        <div class="book-title">Project 3</div>
+      </div>
+      
+      <!-- Book 4 -->
+      <div class="book" data-project="project4">
+        <img src="images/p4.png" alt="Project 4" class="book-image">
+        <div class="book-title">Project 4</div>
+      </div>
+      
+      <!-- Book 5 -->
+      <div class="book" data-project="project5">
+        <img src="images/p5.png" alt="Project 5" class="book-image">
+        <div class="book-title">Project 5</div>
+      </div>
+      
+      <!-- Book 6 -->
+      <div class="book" data-project="project6">
+        <img src="images/p6.png" alt="Project 6" class="book-image">
+        <div class="book-title">Project 6</div>
+      </div>
+    </div>
+      
+    <div class="project-overlay" id="project1">
+       <div class="project-card"></div>
+      <button class="close-btn">×</button>
+      <div class="project-content animate-on-scroll">
+        <h3>BizzUp</h3>
+        
+        
+        <div class="video-container animate-on-scroll">
+          <video autoplay muted playsinline controls poster="images/bizzup1.png">
+            <source src="videos/bizzupdemo.mov" type="video/mp4">
+          </video>
+        </div>
+             <div class="content-columns">
+               <div class="left-column">
+                 <p class="project-description animate-on-scroll">
+                 <span>BizzUp</span> is a community-driven web platform that helps Greencastle residents 
+                find and support local businesses through a simple directory and points-based 
+                loyalty system. Users earn points for each check-in to redeem exclusive deals, while businesses gain visibility and repeat traffic.
+                </p>
+        
+                <div class="content-columns">
+                  <div class="left-column">
+                    <div class="project-features animate-on-scroll">
+                     <h4>Key Features</h4>
+                       <ul>
+                        <li>All-Business Directory: From cafés to boutiques and services</li>
+                        <li>Points-Based Rewards: Earn and redeem points for discounts</li>
+                       <li>Local Tourism: Spotlight deals, events, and community favorites</li>
+                       </ul>
+                       </div>
+        
+                    <div class="tech-stack animate-on-scroll">
+                      <h4>Built With</h4>
+                       <div class="tech-items">
+                        <span>React.js</span>
+                         <span>JavaScript</span>
+                          <span>HTML5</span>
+                           <span>CSS3</span>
+                             <span>Firebase</span>
+                             <span>Google Maps API</span>
+                              <span>Vercel</span>
+                       </div>
+                     </div>
+        
+        <div class="project-links animate-on-scroll">
+          <a href="https://github.com/Quantr10/BizzUp" target="_blank" class="github-btn">
+             <i class="fab fa-github"></i> View on GitHub
+              </a>
+          <a href="https://bizzup.vercel.app/" target="_blank" class="bizzup-btn">
+             <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+             </div>
+            </div>
+           </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      
+<div class="project-overlay" id="project2">
+  <button class="close-btn">×</button>
+  <div class="project-content love-recipe-overlay animate-on-scroll">
+    
+  
+    <div class="project-title-block animate-on-scroll">
+      <h1>"LOVE RECIPE"</h1>
+      <h2>Music Show</h2>
+    </div>
+    
+  
+    <div class="content-wrapper first-wrapper animate-on-scroll">
+       <div class="image-gallery">
+        <div class="gallery-grid">
+          <img src="images/l1.png" alt="Poster design 1">
+          <img src="images/l2.png" alt="Poster design 2"> 
+          <img src="images/l3.png" alt="Social media graphic">
+          <img src="images/l4.png" alt="Event signage">
+          <img src="images/l5.png" alt="Merchandise design">
+          <img src="images/l6.png" alt="Hashtag campaign">
+        </div>
+      </div>
+      
+      
+      <div class="text-column first-text-column">
+        <div class="main-description">
+          <p><span>LOVE RECIPE</span> was an immersive concert experience that took
+             audiences through love's four emotional stages <span>(spark, flame, storm, and embers)</span>.
+              As Head of PR and lead designer, I developed the visual identity and sponsorship 
+              strategy that secured <span>20M VND</span> through targeted outreach. My dual role ensured all
+               promotional materials and the live experience perfectly captured the show's emotional
+                journey while delivering results.</p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="content-wrapper second-wrapper animate-on-scroll">
+      
+      <div class="text-column secondary-text-column">
+        <div class="secondary-description">
+          <p>Featured here are my designs for the media promotional campaign,
+             created to <span>boost engagement</span> and <span>attract larger audiences</span> to the
+              club event. The handheld hashtag signs I designed served a dual
+               purpose: they eliminated the awkwardness of posing for photos while
+                increasing brand recognition across social media platforms whenever
+                 attendees shared their pictures.</p>
+        </div>
+      </div>
+      
+      
+      <div class="image-column">
+        <img src="images/love2.png" alt="LOVE RECIPE hashtag signs" class="secondary-poster">
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+<div class="project-overlay" id="project3">
+  <button class="close-btn">×</button>
+  <div class="project-content honth-overlay">
+    
+    
+    <div class="honth-title">
+      <h1>"Humans of NTH"</h1>
+      <h2>Merchandise</h2>
+    </div>
+    
+    
+    <div class="honth-wrapper pin-wrapper">
+    
+      <div class="honth-image-column">
+        <img src="images/pin.png" alt="HONTH Pin" class="honth-image">
+      </div>
+      
+      
+      <div class="honth-text-column">
+        <div class="honth-description">
+          <h3>Pin</h3>
+          <p>A special commemorative pin designed to <span>honor
+             our guest models</span> who brought the workshop's visual 
+             identity to life. These limited-edition badges serve
+              as both a token of appreciation for their creative
+               contributions and a wearable symbol of community for
+                club members. By wearing this pin, members become 
+                ambassadors - sparking conversations that <span>amplify our workshop's
+                 reach</span> and <span>attract new participants</span> to future events.</p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="honth-wrapper lanyard-wrapper">
+    
+      <div class="honth-image-column">
+        <img src="images/lanyardd.png" alt="HONTH Lanyard" class="honth-image">
+      </div>
+      
+      
+      <div class="honth-text-column">
+        <div class="honth-description">
+          <h3>Lanyard</h3>
+          <p>This limited-edition lanyard was awarded to participants
+             who won our interactive <span>social media minigame</span>. To earn it, 
+             players completed challenges like sharing workshop moments,
+              tagging friends in creative ways, and sparking online discussions.
+               The game's viral mechanics helped <span>spread awareness</span> to hundreds of new 
+               potential members. Each lanyard became a <span>trophy of participation</span>,
+                encouraging winners to keep engaging while inspiring others to join
+                 future workshops.</p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="project-overlay" id="project4">
+  <button class="close-btn">×</button>
+  <div class="project-content project4-overlay animate-on-scroll">
+  
+    
+    <div class="project4-title-block animate-on-scroll">
+      <h1>"Werifesteria"</h1>
+      <h2>Photography Project</h2>
+    </div>
+    
+    
+    <div class="project4-wrapper first-wrapper animate-on-scroll">
+      <div class="project4-image-column">
+        <img src="images/weripic.png" alt="Werifesteria photography collage" class="project4-main-image">
+      </div>
+      
+      <div class="project4-text-column first-text-column">
+        <div class="project4-description">
+          <h3>Concept</h3>
+          <p>The <span>"Werifesteria"</span> photography project captures
+             the poetic journey of wandering through forests in
+              search of mystery. Through evocative images of model
+               @thaoan moving through sunlit woods, the series tells 
+               a visual story of <span>discovery and hope</span>. Natural light becomes
+                both subject and metaphor, transforming ordinary landscapes
+                 into scenes of quiet wonder and emotional depth.</p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="project4-wrapper second-wrapper animate-on-scroll">
+      <div class="project4-text-column secondary-text-column">
+        <div class="project4-secondary-description">
+          <h3>Impact</h3>
+          <p>The project found remarkable success on Instagram,
+             with all three posts reaching over <span>5,000 people</span> 
+             and the companion video surpassing <span>1000 views</span>.
+              Its enigmatic captions and hauntingly beautiful aesthetic
+               resonated deeply with audiences. The series demonstrated how 
+               compelling visual storytelling can create meaningful connections,
+                inspiring viewers to explore their own journeys through nature.</p>
+        </div>
+      </div>
+      
+      <div class="project4-video-column">
+        <video controls poster="images/werifesteria-video-poster.jpg">
+          <source src="videos/werivid.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+<div class="project-overlay" id="project5">
+  <button class="close-btn">×</button>
+  <div class="project-content project5-overlay animate-on-scroll">
+    
+    
+    <div class="project5-title-block animate-on-scroll">
+      <h1>"Ma Douce Muse"</h1>
+      <h2>Film Photography Project</h2>
+    </div>
+    
+    
+    <div class="project5-image-container animate-on-scroll">
+      <img src="images/mdm.png" alt="Ma Douce Muse photography series" class="project5-main-image">
+    </div>
+    
+  
+    <div class="project5-description animate-on-scroll">
+      <h3>About</h3>
+      <p>This <span>film photography</span> series captures the fragile transition
+         from <span>adolescence to adulthood</span>, a profound threshold of personal
+          transformation. Shot on film with rich grain and layered light,
+           the images employ dynamic angles and a warm, nostalgic palette to
+            evoke both the energy and melancholy of coming-of-age. What began
+             as a <span>personal celebration</span> evolved into a <span>visual meditation on growth</span>,
+              where the tactile imperfections of film mirror the beautiful uncertainties
+               of this life-changing passage. Through unconventional
+                perspectives and textured compositions, the work invites
+                 viewers to <span>contemplate their own journeys of becoming</span>.</p>
+    </div>
+    
+  </div>
+</div>
+
+<div class="project-overlay" id="project6">
+  <button class="close-btn">×</button>
+  <div class="project-content project6-overlay animate-on-scroll">
+    
+    
+    <div class="project6-title-block animate-on-scroll">
+      <h1>"Only You"</h1>
+      <h2>Music Video Project</h2>
+      <h3>Chỉ một câu - Thịnh Suy</h3>
+    </div>
+    
+  
+    <div class="project6-video-container animate-on-scroll">
+      <div class="video-shadow">
+        <video controls poster="images/only-you-poster.jpg">
+          <source src="videos/Only you_ music video.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    
+    
+   <div class="project6-description animate-on-scroll">
+    <h3>Only You</h3>
+  <p>This music video tells a heartfelt story of <span>young love</span>
+     and <span>missed connections</span>. As the <span>director, cinematographer, 
+     editor, and writer,</span> I took complete creative control of this 
+     4-minute project filmed over <span>4 hours</span> from start to finish. 
+     The narrative follows a shy boy who believes his crush has accepted
+      another suitor's gift of milk, when in reality she refused it.
+       After this emotional misunderstanding, their honest conversation 
+       leads to a sweet confession and the beginning of their relationship.</p>
+  
+  <p>Shot with a warm, nostalgic visual style reminiscent
+     of film photography, the video captures the tender uncertainty of 
+     first love. The project earned perfect marks (10/10) and marked my
+      <span>first experience</span> bringing a creative vision to life through directing,
+       filming, and editing every element myself. Through its quiet moments 
+       and emotional payoff, the video celebrates both <span>youthful romance</span> and 
+        power of <span>visual storytelling</span>.</p>
+               </div>
+              </div>
+           </div>
+         </div>
+         </section>
+
+ <section id="contact" class="contact-section">
+  <div class="container ">
+    <h2 class="contact-heading ">Contact</h2>
+    
+    <div class="contact-cards-container ">
+    
+      <div class="contact-card">
+        <h3>Get In Touch</h3>
+        <ul class="contact-info">
+          <li><span>Name:</span> Tra Song Vo</li>
+          <li><span>Email:</span> <a href="mailto:trasongvo@gmail.com" class="contact-link">trasongvo@gmail.com</a></li>
+          <li><span>LinkedIn:</span> <a href="https://linkedin.com/in/trasongvo" target="_blank" class="contact-link">Connect with me</a></li>
+          <li><span>GitHub:</span> <a href="https://github.com/AstraVo06" target="_blank" class="contact-link">View my projects</a></li>
+        </ul>
+      </div>
+      
+    
+      <div class="contact-card ">
+        <h3>Availability</h3>
+        <ul class="contact-info">
+          <li><span>Status:</span> Open to opportunities</li>
+          <li><span>Location:</span> Greencastle, IN</li>
+          <li><span>Resume:</span> <a href="path/to/document/TraVo_Resume.pdf" target="_blank" class="contact-link">Download PDF</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    
+    <div class="circle circle-top-right "></div>
+    <div class="circle circle-bottom-left"></div>
+  </div>
+</section>
+      
+      
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
 
   <script src="index.js"></script>
 </body>
