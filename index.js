@@ -208,3 +208,6 @@ if ('ontouchstart' in window) {
   console.log("Touchscreen device detected");
 }
 
+if (/Android|iPhone/i.test(navigator.userAgent)) {
+  document.querySelector('.view-cv-btn').setAttribute('download', '');
+}
