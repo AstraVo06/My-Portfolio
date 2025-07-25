@@ -134,7 +134,23 @@ books.forEach(book => {
         
         if (!overlay) return;
 
-        // Show overlay
+        // Calculate target scroll position (center of work section)
+        const workSectionRect = workSection.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+        const targetScroll = window.scrollY + workSectionRect.top + (workSectionRect.height / 2) - (viewportHeight / 2);
+
+        // Scroll to center of work section first
+        await new Promise(resolve => {
+            window.scrollTo({
+                top: targetScroll,
+                behavior: 'smooth'
+            });
+            
+            // Wait for scroll to complete
+            setTimeout(resolve, 500);
+        });
+
+        // Then show overlay
         projectOverlays.forEach(ov => ov.classList.remove('show'));
         overlay.classList.add('show');
         document.body.style.overflow = 'hidden';
@@ -142,10 +158,9 @@ books.forEach(book => {
         // Handle video
         const video = overlay.querySelector('video');
         if (video) {
-            // Reset video state
             video.currentTime = 0;
-            video.muted = true; // Start muted
-            video.controls = true; // Show native controls
+            video.muted = true;
+            video.controls = true;
             
             try {
                 await video.play();
@@ -153,21 +168,10 @@ books.forEach(book => {
                 console.log('Autoplay blocked:', e);
             }
         }
-        
-        // Center the overlay
-        const workSectionTop = workSection.offsetTop;
-        const workSectionHeight = workSection.offsetHeight;
-        const viewportHeight = window.innerHeight;
-        const targetScroll = workSectionTop + (workSectionHeight / 2) - (viewportHeight / 2);
-        
-        window.scrollTo({
-            top: targetScroll,
-            behavior: 'smooth'
-        });
     });
 });
 
-// Close handlers (reset video state)
+// Close handlers remain the same
 closeButtons.forEach(button => {
     button.addEventListener('click', function(e) {
         e.stopPropagation();
@@ -177,6 +181,7 @@ closeButtons.forEach(button => {
             video.pause();
             video.currentTime = 0;
             video.muted = true; // Reset to muted when closing
+
         }
         overlay.classList.remove('show');
         document.body.style.overflow = 'auto';
