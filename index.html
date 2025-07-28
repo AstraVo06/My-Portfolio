@@ -6,6 +6,15 @@
   <title>Tra Vo Portfolio – Home</title>
   <link rel="stylesheet" href="index.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+ <script>
+  if(window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+    document.write('<base href="/">');
+    fetch('/videos/bizzupdemo.mp4')
+      .then(res => {
+        if(!res.ok) console.error('Video not found on server!');
+      });
+  }
+</script>
 </head>
 
 <body class="home">
@@ -574,7 +583,6 @@
       <div class="project4-video-column">
         <video controls poster="images/werifesteria-video-poster.jpg">
           <source src="videos/werivid.mp4" type="video/mp4">
-          Your browser does not support the video tag.
         </video>
       </div>
     </div>
