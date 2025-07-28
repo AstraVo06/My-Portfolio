@@ -4,6 +4,28 @@
     {
       "src": "*.html",
       "use": "@vercel/static"
+    },
+    {
+      "src": "*.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "public/videos/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/videos/(.*)",
+      "dest": "/public/videos/$1"
+    },
+    {
+      "src": "/(.*)", 
+      "dest": "/index.html"
     }
   ]
 }
