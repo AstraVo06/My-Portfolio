@@ -1,31 +1,20 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "*.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "*.css",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "*.js",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "public/videos/*",
-      "use": "@vercel/static"
-    }
+    {"src": "*.html", "use": "@vercel/static"},
+    {"src": "*.css", "use": "@vercel/static"},
+    {"src": "*.js", "use": "@vercel/static"},
+    {"src": "fonts/*", "use": "@vercel/static"},
+    {"src": "images/*", "use": "@vercel/static"},
+    {"src": "videos/*", "use": "@vercel/static"}
   ],
   "routes": [
     {
-      "src": "/videos/(.*)",
-      "dest": "/public/videos/$1"
-    },
-    {
       "src": "/(.*)", 
-      "dest": "/index.html"
+      "dest": "/index.html",
+      "headers": {
+        "Cache-Control": "no-cache"
+      }
     }
   ]
 }

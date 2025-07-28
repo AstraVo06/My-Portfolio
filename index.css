@@ -3,13 +3,13 @@
    —————————————————————————————— */
 @font-face {
   font-family: 'Bricolage Grotesque';
-  src: url('fonts/BricolageGrotesque-Regular.ttf') format('truetype');
+  src: url('/fonts/BricolageGrotesque-Regular.ttf') format('truetype');
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Bricolage Grotesque';
-  src: url('fonts/BricolageGrotesque-Bold.ttf') format('truetype');
+  src: url('/fonts/BricolageGrotesque-Bold.ttf') format('truetype');
   font-weight: 700;
 }
 body, h1, h2, h3, p, a, span, button {
